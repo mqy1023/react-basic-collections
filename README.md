@@ -1,6 +1,6 @@
 
 
-## 搭建基础开发环境所需的JS文件
+## react开发必需的基础库
 
 * [babel可以将JSX编译成浏览器识别的标准Javascript]
 * [react核心库]
