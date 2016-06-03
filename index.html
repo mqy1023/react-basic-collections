@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react baseJs</title>
+    <!-- script顺序 -->
+    <script src="./react/react.min.js" charset="utf-8"></script>
+    <script src="./react-dom/react-dom.min.js" charset="utf-8"></script>
+	
+	<!-- 用于ES6转换成ES5的编译工具 -->
+    <script src="./babel/browser.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id='main'></div>
+    <!-- 用babel编译 -->
+    <script type='text/babel'>
+
+      ReactDOM.render(<h1>Hello World!</h1>,document.getElementById('main'));
+	  
+    </script>
+  </body>
+</html>
