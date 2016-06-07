@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>react baseJs</title>
+    <!-- script顺序 -->
+    <script src="../../react/react.min.js" charset="utf-8"></script>
+    <script src="../../react-dom/react-dom.min.js" charset="utf-8"></script>
+
+    <!-- JSX编译成JavaScript -->
+    <script src="../../babel/browser.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div id='main'></div>
+<!-- 用babel编译 -->
+<script type='text/babel'>
+    var FriendsContainer = React.createClass({
+        getInitialState: function(){
+            return {
+                name: 'Tyler McGinnis',
+                friends: ['Jake Lingwall', 'Murphy Randall', 'Merrick Christensen'],
+            }
+        },
+        addFriend: function(friend){
+            this.setState({
+                friends: this.state.friends.concat([friend])
+            });
+        },
+        render: function(){
+            return (
+                <div>
+                    <h3> Name: {this.state.name} </h3>
+                    <AddFriend addNew={this.addFriend} />
+                    <ShowList names={this.state.friends} />
+                </div>
+            )
+        }
+    });
+
+    var AddFriend = React.createClass({
+        getInitialState: function(){
+            return {
+                newFriend: ''
+            }
+        },
+        propTypes: {
+            addNew: React.PropTypes.func.isRequired
+        },
+        updateNewFriend: function(e){
+            this.setState({
+                newFriend: e.target.value
+            });
+        },
+        handleAddNew: function(){
+            this.props.addNew(this.state.newFriend);
+            this.setState({
+                newFriend: ''
+            });
+        },
+        render: function(){
+            return (
+                <div>
+                    <input type="text" value={this.state.newFriend} onChange={this.updateNewFriend} />
+                    <button onClick={this.handleAddNew}> Add Friend </button>
+                </div>
+            );
+        }
+    });
+
+    var ShowList = React.createClass({
+        getDefaultProps: function(){
+            return {
+                names: []
+            }
+        },
+        render: function(){
+            var listItems = this.props.names.map(function(friend){
+                return <li> {friend} </li>;
+            });
+            return (
+                <div>
+                    <h3> Friends </h3>
+                    <ul> {listItems} </ul>
+                </div>
+            )
+        }
+    });
+    ReactDOM.render(<FriendsContainer></FriendsContainer>,document.getElementById('main'));
+</script>
+</body>
+</html>
