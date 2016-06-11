@@ -1,5 +1,5 @@
 var React = require('react');
-var Child = require('./child.jsx');
+var Child = require('./Child.jsx');
 
 var Parent = React.createClass({
     render: function(){
