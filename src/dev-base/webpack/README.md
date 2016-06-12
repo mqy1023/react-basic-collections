@@ -11,30 +11,25 @@
 	}
 	```
 	
-* 3、`react`相关库
-	```
-	npm install react --save;//react核心库
-	npm install react-dom --save;//react操作dom库
-	```
 
-* 4、`Babel`- -编译JSX
+* 3、`Babel`- -编译JSX
 	```
 	npm install --save-dev babel-core;//babel核心
 	npm install --save-dev babel-loader;	//webpack中babel编译器
 	npm install --save-dev babel-preset-react;	//react的JSX编译成js
 	```
 
-* 5、`html-webpack-plugin` - - 修改html文件插件
+* 4、`html-webpack-plugin` - - 修改html文件插件
 `npm install --save-dev html-webpack-plugin`;
 
-* 6、`webpack`相关库
+* 5、`webpack`相关库
 	```
 	npm install --save-dev webpack;	//webpack核心
 	npm install --save-dev webpack-dev-server;	//webpack服务器
 	```
 * **
 
-* 7、`.babelrc` - - 设置webpack的loader加载器(babel编译器)规则
+* 6、`.babelrc` - - 设置webpack的loader加载器(babel编译器)规则
 
 	```
 	{
@@ -43,7 +38,7 @@
 	  ]
 	}
 	```
-* 8、`webpack.config.js` - - webpack配置
+* 7、`webpack.config.js` - - webpack配置
 
 ```
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -80,6 +75,21 @@ module.exports = {
 
 ##三、jsx源码均放在./app/jsx目录下
 其中模块化管理jsx
+
+##四、使用
+
+1、npm install 
+2、bower install
+
+3、构建命令
+
+webpack     //执行一次开发时的编译
+webpack -p      //执行一次生成环境的编译（压缩）
+webpack -w  //在开发时持续监控增量编译（很快）
+
+//因为在package.json配置了script
+npm start //相当于执行`webpack-dev-server`命令启动服务器
+npm run prod //相当于执行`webpack -p`打包命令
 
 ## 总结
 

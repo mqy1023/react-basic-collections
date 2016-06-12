@@ -1,4 +1,3 @@
-var React = require('react');
 var Child = require('./Child.jsx');
 
 var Parent = React.createClass({
