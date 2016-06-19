@@ -1,13 +1,14 @@
 # react_forms_react-router(React基础汇总小项目)
 
-[《Building Applications with React and Flux》](https://www.pluralsight.com/courses/react-flux-building-applications)
+[视频教程：《Building Applications with React and Flux》](https://www.pluralsight.com/courses/react-flux-building-applications)
 
 ## 使用步骤
 
 ```bash
 npm install
 
-npm start 启动，或者 webpack -w   / webpack / webpack -p
+npm start 启动，然后在浏览器中输入:localhost:8080
+或者 webpack -w   / webpack / webpack -p
 
 ```
 
