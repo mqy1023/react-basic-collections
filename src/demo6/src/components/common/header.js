@@ -9,7 +9,7 @@ var Header = React.createClass({
         <nav className="navbar navbar-default">
           <div className="container-fluid">
               <IndexLink to="/" className="navbar-brand">
-                <img src="pluralsight-logo.png" />
+                <img src={require('../../images/pluralsight-logo.png')} />
               </IndexLink>
               <ul className="nav navbar-nav">
                 <li><IndexLink to="/">Home</IndexLink></li>
