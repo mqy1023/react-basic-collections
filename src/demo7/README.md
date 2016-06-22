@@ -1,4 +1,4 @@
-# react_forms_react-router_flux(React基础汇总小项目)
+# react_forms_react-router_flux(汇总小项目)
 
 ## 使用步骤
 
@@ -16,7 +16,7 @@ npm start 启动，然后在浏览器中输入:localhost:8080
 * [《demo6》](../demo6)
 
 ## 相比视频改进点
-视频地址：[Build Your First React App](https://egghead.io/series/build-your-first-react-js-application) is an egghead lesson series.
+[视频教程：《Building Applications with React and Flux》](https://www.pluralsight.com/courses/react-flux-building-applications) 
 
 * 1、换成webpack构建
 * 2、react-router更新为最新2.4.1版本，重构路由代码
